@@ -8,4 +8,3 @@ var2=float(input("introduce un numero: "))
 var3=float(input("introduce un numero: "))
 total=var1+var2+var3
 print("el resultado es", total)
-
