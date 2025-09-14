@@ -6,7 +6,9 @@ var2=4.5
 #variable texto
 var3="hola"
 var_4="adios"
+var5=87
 print("el valor es", var1)
 print("el valor es", var2)
 print("el valor es", var3)
 print("el valor es", var_4)
+print("el valor es", var5)
