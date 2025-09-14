@@ -10,5 +10,3 @@ print("el valor es", var1)
 print("el valor es", var2)
 print("el valor es", var3)
 print("el valor es", var_4)
-
-
