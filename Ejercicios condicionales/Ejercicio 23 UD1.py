@@ -10,4 +10,4 @@ if nota<=10 and nota>=0:
     elif nota<5:
         print("tu nota es un", nota, "y has sacado un insufucuente")
 else:
-    print("la nota que has sacado no esta entre ")
+    print("la nota que has sacado no esta entre 0 y 10")

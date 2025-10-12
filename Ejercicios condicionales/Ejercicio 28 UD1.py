@@ -1,4 +1,4 @@
-
+# Mejora el programa anterior para controlar también la introducción de símbolos. Utiliza elif.
 letra=input("introduce la letra por favor: ")
 if letra.isalpha()==True:
     if letra.islower()==True:
@@ -8,4 +8,4 @@ if letra.isalpha()==True:
 elif letra.isnumeric()==True:
     print("el valor introducido es un número")
 else:
-    print("La letra es un simbolo")
+    print("El valor introducido es un símbolo")
