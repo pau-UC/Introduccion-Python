@@ -5,7 +5,7 @@ cociente= dividendo/divisor
 resto= dividendo%divisor
 print("el cociente es", cociente)
 print("el resto es", resto)
-if dividendo%divisor==0:
+if resto==0:
     print("el dividendo es par")
 else:   
     print("el dividendo es impar")
