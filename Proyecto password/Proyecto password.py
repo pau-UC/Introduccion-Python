@@ -13,17 +13,17 @@ print("     Posición 8 un número menor o igual que 5")
 password=input("introduce una palabra clave: ")
 comprobador=True
 if len(password) >=6 and len(password) <=8:
-    if password[0].isnumeric and int(password[0])>=1 and int(password[0])<=5:
+    if password[0].isnumeric() and int(password[0])>=1 and int(password[0])<=5:
         print("")
     else:
         print("Error en el caracter 1")
         comprobador==False
-    if password[1].islower:
+    if password[1].islower():
         print("")
     else:
         print("Error en el caracter 2")
         comprobador==False
-    if password[2].isupper:
+    if password[2].isupper():
         print("")
     else:
         print("Error en el caracter 3")
@@ -33,28 +33,33 @@ if len(password) >=6 and len(password) <=8:
     else:
         print("Error en el caracter 4")
         comprobador==False
-    if password[4].islower:
+    if password[4].islower():
         print("")
     else:
         print("Error en el caracter 5")
-        Comprobador==False
+        comprobador==False
     if password[5].isnumeric and int(password[5])>=6 and int(password[5])<=9:
-        print("")
+        if len(password)==6 and comprobador==True:
+            print("El format del PASSWORD és correcte")
+        else:
+            print("")
     else:
         print("Error en el caracter 6")
         Comprobador=False
-    if password[6]== "&" or "/" or "#":
-        print("")
-    elif password[6]==7 and comprobador==True:
-        print("El format del PASSWORD és correcte")
+    if len(password)==7 and password[6]=="&" or "/" or "#":
+        if len(password)==7 and comprobador==True:
+            print("El format del PASSWORD és correcte")
+        else:
+            print("")
     else:
         print("Error en el caracter 7")
-    if password[7].isnumeric and int(password[7])<=5:
-        print("El format del PASSWORD és correcte")
-    elif password[7]==8 and comprobador==True:
-        print("El format del PASSWORD és correcte")
+    if len(password)==8 and password[7].isnumeric() and int(password[7])<=5:
+        if len(password)==8 and comprobador==True:
+            print("El format del PASSWORD és correcte")
+        else:
+            print("")
     else:
         print("Error en el caracter 8")       
 else:
     longitud=len(password)
-    print(f"Error, el password tiene una longitud de", longitud, "caracteres i no cumple los requisitos")
+    print("Error, el password tiene una longitud de", longitud, "caracteres i no cumple los requisitos")
