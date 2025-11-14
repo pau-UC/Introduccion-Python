@@ -29,7 +29,7 @@ if len(password) >=6 and len(password) <=8:
     else:
         comprobador=False
         print("Error en el caracter 3")
-    if password[3] in ["*" or "_" or "@"]:
+    if password[3] in ["*", "_", "@"]:
         print("")
     else:
         comprobador=False
@@ -39,22 +39,20 @@ if len(password) >=6 and len(password) <=8:
     else:
         comprobador=False
         print("Error en el caracter 5")
-    if password[5].isnumeric and int(password[5])>=6 and int(password[5])<=9:
-        if len(password)==6 and comprobador==True:
-            print("El format del PASSWORD és correcte")
-            corrector=1
-        else:
-            print("")
+    if len(password)==6 and password[5].isnumeric and int(password[5])>=6 and int(password[5])<=9 and comprobador==True:
+        print("El format de PASSWORD és correcte")
+        corrector=1
+    elif password[5].isnumeric and int(password[5])>=6 and int(password[5])<=9:
+        print("")
     else:
         comprobador=False
         print("Error en el caracter 6")
-    if len(password)==7 and password[6] in ["&" or "/" or "#"]:
-        if len(password)==7 and comprobador==True:
-            print("El format del PASSWORD és correcte")
-            corrector==1
-        else:
-            print("")
+    if len(password)==7 and password[6] in ["&", "/", "#"] and comprobador==True:
+        corrector=1   
+        print("El format del PASSWORD és correcte")      
     elif corrector==1:
+        print("")
+    elif len(password)>=7 and password[6] in ["&", "/", "#"]:
         print("")
     else:
         comprobador=False
@@ -63,8 +61,8 @@ if len(password) >=6 and len(password) <=8:
         print("El format del PASSWORD és correcte")
     elif corrector==1:
         print("")
-    elif len(password)==8 and password[7].isnumeric() and int(password[7])<=5:
-        print("")
+    elif password[7].isnumeric() and int(password[7])<=5:
+        ("")
     else:
         comprobador=False
         print("Error en el caracter 8")       
