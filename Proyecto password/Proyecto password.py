@@ -54,7 +54,7 @@ if len(password) >=6 and len(password) <=8:
     # si la longitud de la contraseña es 6 y que no ha habido ningun error de caracter, comprobar que la sexta letra del password es correcta y poner que la contraseña es valida
     if len(password)==6 and password[5].isnumeric() and int(password[5])>=6 and int(password[5])<=9 and comprobador==True:
         print("El formato de PASSWORD és correcto")
-    # si no se cumple la primera condicion comprobar que la séptima letra del password es correcta
+    # si no se cumple la primera condicion comprobar que la sexta letra del password es correcta
     elif password[5].isnumeric() and int(password[5])>=6 and int(password[5])<=9:
         print("")
         # Si no se cumple las condiciones error en el caracter 6
