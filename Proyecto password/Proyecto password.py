@@ -53,7 +53,7 @@ if len(password) >=6 and len(password) <=8:
         print("Error en el caracter 5")
     # Comprobar que la sexta letra del password es correcta
     if len(password)==6 and password[5].isnumeric() and int(password[5])>=6 and int(password[5])<=9 and comprobador==True:
-        print("El format de PASSWORD és correcte")
+        print("El formato de PASSWORD és correcto")
     elif password[5].isnumeric() and int(password[5])>=6 and int(password[5])<=9:
         print("")
         # Si no se cumple las condiciones error en el caracter 6
@@ -62,12 +62,12 @@ if len(password) >=6 and len(password) <=8:
         print("Error en el caracter 6")
     # 
     if len(password)==7 and password[6] in ["&", "/", "#"] and comprobador==True:   
-        print("El format del PASSWORD és correcte")
+        print("El formato del PASSWORD és correcto")
     # Si la primera condición no se cumple, comprobar si la contraseña es correcta y passar al siguiente caracter sin que te salga error en el caracter 7.      
-    elif len(password)<7 and comprobador==True:
+    elif len(password)<7:
         print("")
     # si no se cumple las otras dos condiciones comprobar que la quinta letra del password es correcta
-    elif password[6] in ["&", "/", "#"]:
+    elif len (password)>=7 and password[6] in ["&", "/", "#"]:
         print("")
     # Si no se cumple las condiciones error en el caracter 7
     else:
@@ -75,12 +75,12 @@ if len(password) >=6 and len(password) <=8:
         print("Error en el caracter 7")
     # Comprobar que la octava letra del password es correcta
     if len(password)==8 and password[7].isnumeric() and int(password[7])<=5 and comprobador==True:
-        print("El format del PASSWORD és correcte")
+        print("El formato del PASSWORD és correcto")
     # Si la primera condición no se cumple, comprobar si la contraseña es correcta y si es correcta que no te salga error en el caracter 8.
-    elif len(password)<8 and comprobador==True:
+    elif len(password)<8:
         print("")
     # Comprobar que la octava letra del password es correcta.
-    elif password[7].isnumeric() and int(password[7])<=5:
+    elif len (password)==8 and password[7].isnumeric() and int(password[7])<=5:
         ("")
     # Si no se cumple las condiciones error en el caracter 8.
     else:
