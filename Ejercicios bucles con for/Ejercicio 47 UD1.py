@@ -10,9 +10,8 @@ if numero1>numero2:
 elif numero2>numero1:
     print(numero2,"-")
     repeticiones=numero2-numero1
-    for i in range(repeticiones+1):
+    for i in range(repeticiones):
         numero2-=1
         print(numero2,"-")
-
 
 
