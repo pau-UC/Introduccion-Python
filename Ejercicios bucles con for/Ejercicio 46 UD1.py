@@ -1,9 +1,11 @@
-#  Realiza un programa que permita introducir una palabra por teclado y puedas recorrer el string distinguiendo vocales y las consonantes: 
+# A partir del programa anterior, soluciona el error que se produce en el test anterior con la palabra Abrigo utilizando únicamente una instrucción. 
 palabra=input("introduce una palabra: ")
 vocales=""
 consonantes=""
 for i in range(len(palabra)):
     if palabra[i] in ["a", "e", "i", "o", "u"]:
+        vocales=vocales + palabra[i] + ","
+    elif palabra[i] in ["A", "E", "I", "O", "U"]:
         vocales=vocales + palabra[i] + ","
     else:
         consonantes= consonantes + palabra[i] + ","
