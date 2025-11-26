@@ -2,7 +2,6 @@ valor=100
 numero=int(input("introduce un numero"))
 while valor>=150 or valor<=50:
     if numero%2==0:
-            print(valor)
         valor=valor/2
     else:
         valor=valor+numero
