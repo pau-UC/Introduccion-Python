@@ -1,6 +1,6 @@
 valor=100
-numero=int(input("introduce un numero"))
-while valor>=150 or valor<=50:
+numero=int(input("introduce un numero: "))
+while 50<=valor<=150:
     if numero%2==0:
         valor=valor/2
     else:
@@ -8,5 +8,5 @@ while valor>=150 or valor<=50:
     if numero%3==0:
         valor=valor-5
     print(valor)
-    if valor<=150 and valor>=50:
-    numero=int(input("introduce un numero"))
+    if 50<=valor<=150:
+        numero=int(input("introduce un numero: "))
