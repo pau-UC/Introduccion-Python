@@ -1,3 +1,3 @@
 # Realiza un programa que gestione un establecimiento de venta de bocadillos. Un pedido se compone de: bocadillo, acompañamiento y bebida. Un cliente puede pedir más de un pedido. El dependiente a partir del menú (ver imagen), se encarga de introducir los datos. El menú solo se visualiza una vez al ejecutar el programa. El programa debe preguntar al dependiente tras la realización de un pedido, si quiere gestionar otro.
 print("Menú"), print("1. Bocadillo de calamares- 9 €"), print("2. Bocadillo de chistorra - 4.5 €"), print("3. Bikini de jamón - 2.5 €"), print(""), print("ACOMPAÑAMIENTO")
-print("1. Patatas finas - 1.5 €")
+print("1. Patatas finas - 1.5 €"), print("2. Patatas gruesas - 1.75 €"), print("3. Patatas rústicas - 2 €")

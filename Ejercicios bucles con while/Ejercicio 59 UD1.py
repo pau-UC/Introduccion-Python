@@ -7,12 +7,11 @@ true=False
 numero=int(input("introduce un número: "))
 while 0<=numero<=1000 or true!=True:
     contador+=1
+    numero=int(input("introduce un número: "))
     if numero<ramdom:
         print("El número que has introducido es menor")
-        numero=int(input("introduce un número: "))
     if numero>ramdom:
         print("El número que has introducido es mayor")
-        numero=int(input("introduce un número: "))
     else:
         print("Acertaste, has realizado", contador, "intentos")
         true=True
