@@ -2,16 +2,13 @@
 import random
 ramdom= random.randint(0,1000)
 print(ramdom)
-contador=0
-true=False
-numero=int(input("introduce un número: "))
-while 0<=numero<=1000 or true!=True:
-    contador+=1
+intentos=0
+numero=-105
+while numero!=ramdom:
+    intentos+=1
     numero=int(input("introduce un número: "))
-    if numero<ramdom:
-        print("El número que has introducido es menor")
-    if numero>ramdom:
+    if numero > ramdom:
         print("El número que has introducido es mayor")
-    else:
-        print("Acertaste, has realizado", contador, "intentos")
-        true=True
+    elif numero < ramdom:
+        print("El número que has introducido es menor ")
+print("Acertaste, has realizado", intentos, "intentos")

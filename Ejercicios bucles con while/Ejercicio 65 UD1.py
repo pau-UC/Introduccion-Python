@@ -1,4 +1,4 @@
-# Programa que pida continuamente números por teclado hasta que el usuario introduzca el valor -99. Será entonces cuando por pantalla aparecerán las siguientes estadísticas: a) total de pares b) total de impares c) total de números positivos d) total de números negativose) total de ceros f) total de la suma de todos los números introducidos.
+# Programa que pida continuamente números por teclado hasta que el usuario introduzca el valor -99. Por pantalla debe aparecer cuál de todos los números introducidos es el mayo y cuál el menor
 numero=int(input("Introduce un número: "))
 pares=0
 impares=0
