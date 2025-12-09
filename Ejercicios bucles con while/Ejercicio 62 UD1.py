@@ -1,3 +1,4 @@
+#  Realiza un programa que pida dos números por teclado y presente por pantalla qué números hay pares e impares en ese rango. Utiliza for. Contempla si primer valor es superior al segundo. 
 concatenarpar=""
 concatenarimpar=""
 numero1=int(input("introduce un numero: "))
