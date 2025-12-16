@@ -7,8 +7,6 @@ print("2. Introducir un total de 3 passwords, luego el programa le indicara si s
 print("3. Bucle que recorra el password y realice las comprobaciones y los contajes necesario.")
 print("4. Testeo de 10 pruebas que permita la evaluación del código")
 contador=0
-correcto=""
-incorrecto=""
 while contador<3:
     numero=0
     Num_opcionA=0
@@ -20,7 +18,7 @@ while contador<3:
     password=input("introduce el password: ")
     comprobador=True
     contador+=1
-    for i in range(len(password)-1):
+    for i in range(len(password)):
         if password[i].isnumeric():
             numero+=1
             if int(password[i])>=1 and int(password[i])<=4:
