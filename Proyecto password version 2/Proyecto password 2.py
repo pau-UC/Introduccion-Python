@@ -10,29 +10,29 @@ contador=0
 correcto=""
 incorrecto=""
 while contador<3:
+    numero=0
+    Num_opcionA=0
+    Num_opcionB=0
+    letra=0
+    minusculas=0
+    mayuscula=0
+    simbolos=0
     password=input("introduce el password: ")
     comprobador=True
     contador+=1
     for i in range(len(password)-1):
-        numero=0
-        Num_opcionA=0
-        Num_opcionB=0
-        letra=0
-        minuscula=0
-        mayuscula=0
-        simbolos=0
         if password[i].isnumeric():
             numero+=1
-            if int(password[i])>=1 and int(password)<=4:
+            if int(password[i])>=1 and int(password[i])<=4:
                 Num_opcionA+=1
-            elif int(password[i])>=5 and int(password)<=9:
+            elif int(password[i])>=5 and int(password[i])<=9:
                 Num_opcionB+=1
             else:
                 comprobador=False
         elif password[i].isalpha():
             letra+=1
             if password[i].islower():
-                minuscula+=1
+                minusculas+=1
             if password[i].isupper():
                 mayuscula+=1
         else:
@@ -41,7 +41,7 @@ while contador<3:
         comprobador=False
     if letra<3:
         comprobador=False
-    if minuscula<2:
+    if minusculas<2:
         comprobador=False
     if mayuscula<1:
         comprobador=False
@@ -55,3 +55,4 @@ while contador<3:
         print("Contraseña", contador, "es correcta")
     else:
         print("Contraseña", contador, "es incorrecta")
+    print(numero, letra, minusculas, mayuscula, simbolos, Num_opcionA, Num_opcionB,)
