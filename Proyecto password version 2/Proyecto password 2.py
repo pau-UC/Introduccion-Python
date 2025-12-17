@@ -7,6 +7,8 @@ print("2. Introducir un total de 3 passwords, luego el programa le indicara si s
 print("3. Bucle que recorra el password y realice las comprobaciones y los contajes necesario.")
 print("4. Testeo de 10 pruebas que permita la evaluación del código")
 contador=0
+correctas=0
+incorrectas=0
 while contador<3:
     numero=0
     Num_opcionA=0
@@ -35,6 +37,7 @@ while contador<3:
                 mayuscula+=1
         else:
             simbolos+=1
+    # Comprobar que se han respetado las condiciones de la introducción.
     if numero<3:
         comprobador=False
     if letra<3:
@@ -49,8 +52,15 @@ while contador<3:
         comprobador=False
     if Num_opcionB<2:
         comprobador=False
+    # Si se han cumplido las condiciones de la introducción la contraseña es correcta.
     if comprobador==True:
         print("Contraseña", contador, "es correcta")
+        correctas+=1
+    # Si no se cumple, la contraseña es incorrecta.
     else:
         print("Contraseña", contador, "es incorrecta")
+        incorrectas+=1
     print(numero, letra, minusculas, mayuscula, simbolos, Num_opcionA, Num_opcionB,)
+print("El número de contraseñas correctas es", correctas)
+print("El número de contraseñas incorrectas es", incorrectas)
+# Testeo de contraseñas: Ddd791(), 7A$cñ9=2, 477Dss|@, 
