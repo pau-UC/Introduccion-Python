@@ -21,6 +21,7 @@ while contador<3:
     comprobador=True
     contador+=1
     for i in range(len(password)):
+        # Comprobar que es numerico
         if password[i].isnumeric():
             numero+=1
             if int(password[i])>=1 and int(password[i])<=4:
@@ -29,12 +30,14 @@ while contador<3:
                 Num_opcionB+=1
             else:
                 comprobador=False
+        # Comprobar que es una letra
         elif password[i].isalpha():
             letra+=1
             if password[i].islower():
                 minusculas+=1
             if password[i].isupper():
                 mayuscula+=1
+        # Si no cumple las conciones es un simbolo
         else:
             simbolos+=1
     # Comprobar que se han respetado las condiciones de la introducción.
@@ -63,4 +66,4 @@ while contador<3:
     print(numero, letra, minusculas, mayuscula, simbolos, Num_opcionA, Num_opcionB,)
 print("El número de contraseñas correctas es", correctas)
 print("El número de contraseñas incorrectas es", incorrectas)
-# Testeo de contraseñas: Ddd791(), 7A$cñ9=2, 477Dss|@, 
+# Testeo de contraseñas: Ddd791(), 7A$cñ9=2, 477Dss|@, 888jkL4, 892Sgh%&, 789Opl"·, &/238Pol), ?¿781Sdf, 23489SSff·$, 238+çñD-
