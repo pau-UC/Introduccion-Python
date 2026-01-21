@@ -11,5 +11,5 @@ for i in lista1:
 for i in lista2:
     if not i in lista1:
         listanorepetidos.append(i)
-print (listarepetidos)
-print (listanorepetidos)
+print ("Estan repetidas:", listarepetidos)
+print ("No estan repetidas:", listanorepetidos)
