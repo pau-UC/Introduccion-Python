@@ -2,11 +2,14 @@
 lista1=["a","b","D","x","r","X","3","h","w","2","i"]
 repetir="s"
 while not repetir=="n":
-    numero=int(input("que numero deseas eliminar: "))
-    if numero in lista1:
-        lista1.remove(numero)
+    numero=input("que numero deseas eliminar: ")
+    if numero.isnumeric():
+        if numero in lista1:
+            lista1.remove(numero)
+            print(lista1)
+        else:
+            print("el valor introducido no esta en la lista")
     else:
-        print("el valor introducido no esta en la lista")
-    print(lista1)
+        print("Introduce un valor númerico")
     repetir=input("Deseas introducir otro valor s/n: ")
     
