@@ -26,9 +26,25 @@ while repetir !="n":
         print("El valor introducido no cumple con la longitud correcta")
         Lista_intentos.append(0)
         dni_incorrectos.append(dni)
+print(dni_correctos)
+print(dni_incorrectos)
 print("1. Listar DNI correcto de menor a mayor")
 print("2. Listar DNI incorrecto de menor a mayor")
 print("3. Numero total de errores producidos")
 print("4. Numero total de DNI correctos")
 print("5. Porcentajes intentos con error y sin error")
 print("6. Salir s/n")
+numero=int(input("Introduce que opción elige: "))
+if numero==1:
+    dni_correctos.sort()
+    print(dni_correctos)
+if numero==2:
+    dni_incorrectos.sort()
+    print(dni_incorrectos)
+if numero==3:
+    errorres=len(dni_incorrectos)
+    print(errorres)
+if numero==4:
+    aciertos=len(dni_correctos)
+if numero==5:
+    print("")
