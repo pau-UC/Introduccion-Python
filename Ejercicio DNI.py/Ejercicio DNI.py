@@ -3,6 +3,8 @@ resto=0
 Lista_intentos=[]
 letras=["T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E"]
 repetir="s"
+longitudes=0
+numericos=0
 dni_correctos=[]
 dni_incorrectos=[]
 while repetir !="n":
@@ -20,11 +22,14 @@ while repetir !="n":
         else:
             print("El valor introducido debe ser numerico")
             Lista_intentos.append(1)
+            numerico+=1
             dni_incorrectos.append(dni)     
         repetir=input("Deseas introducir otro alumno s/n: ")
     else:
         print("El valor introducido no cumple con la longitud correcta")
+        repetir=input("Deseas introducir otro alumno s/n: ")
         Lista_intentos.append(0)
+        longitud+=1
         dni_incorrectos.append(dni)
 print(dni_correctos)
 print(dni_incorrectos)
@@ -47,4 +52,13 @@ if numero==3:
 if numero==4:
     aciertos=len(dni_correctos)
 if numero==5:
-    print("")
+    intentos=errorres+aciertos
+    correctos=aciertos/intentos*100
+    incorrectos=errorres/intentos*100
+    longitudes=longitud/intentos*100
+    numericos=numerico/intentos*100
+    print("El número de intentos és:", intentos)
+    print("El porcentaje de DNI correctos son:", correctos)
+    print("El porcentaje de DNI incorrectos son:", incorrectos)
+    print("El porcentaje de DNI con error de longitud es:", longitudes)
+    print("El porcentaje de DNI con error de dígitos es:", numericos)
