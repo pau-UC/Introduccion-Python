@@ -18,6 +18,7 @@ while repetir !="n":
                     dni+= "-" + letras[i]
                     Lista_intentos.append(3)
                     dni_correctos.append(dni)
+                    print(dni)
         else:
             print("El valor introducido debe ser numerico")
             Lista_intentos.append(1)
