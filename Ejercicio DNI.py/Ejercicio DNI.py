@@ -65,3 +65,4 @@ if numero==5:
     print("El porcentaje de DNI con error de dígitos es:", numericos)
 if numero==6:
     print("Programa finalizado")
+    fklkfkfdkfksdfk
