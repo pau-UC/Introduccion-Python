@@ -63,3 +63,5 @@ if numero==5:
     print("El porcentaje de DNI incorrectos son:", incorrectos)
     print("El porcentaje de DNI con error de longitud es:", longitudes)
     print("El porcentaje de DNI con error de dígitos es:", numericos)
+if numero==6:
+    print("Programa finalizado")
