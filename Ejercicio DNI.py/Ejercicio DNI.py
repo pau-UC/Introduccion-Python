@@ -3,8 +3,8 @@ resto=0
 Lista_intentos=[]
 letras=["T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E"]
 repetir="s"
-longitudes=0
-numericos=0
+longitud=0
+numerico=0
 dni_correctos=[]
 dni_incorrectos=[]
 while repetir !="n":
@@ -33,6 +33,8 @@ while repetir !="n":
         dni_incorrectos.append(dni)
 print(dni_correctos)
 print(dni_incorrectos)
+errorres=len(dni_incorrectos)
+aciertos=len(dni_correctos)
 print("1. Listar DNI correcto de menor a mayor")
 print("2. Listar DNI incorrecto de menor a mayor")
 print("3. Numero total de errores producidos")
@@ -47,10 +49,9 @@ if numero==2:
     dni_incorrectos.sort()
     print(dni_incorrectos)
 if numero==3:
-    errorres=len(dni_incorrectos)
     print(errorres)
 if numero==4:
-    aciertos=len(dni_correctos)
+    print(aciertos)
 if numero==5:
     intentos=errorres+aciertos
     correctos=aciertos/intentos*100
