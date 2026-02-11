@@ -2,5 +2,5 @@ palabras=input()
 lista=[]
 lista=palabras.split(" ")
 lista.reverse()
-lista="".join(lista)
+lista=" ".join(lista)
 print(lista)
