@@ -1,5 +1,6 @@
+import math
 numero=float(input())
-num_inferior=round(numero-1, 0)
-num_superior=round(numero+1, 0)
-redondeo=round(numero,0)
-print(num_inferior, num_superior, redondeo)
+num_inf=math.floor(numero)
+num_sup=math.ceil(numero)
+redondeo=round(numero)
+print(num_inf, num_sup, redondeo)
