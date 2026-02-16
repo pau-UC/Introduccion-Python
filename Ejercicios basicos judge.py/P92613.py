@@ -1,0 +1,5 @@
+numero=float(input())
+num_inferior=round(numero-1, 0)
+num_superior=round(numero+1, 0)
+redondeo=round(numero,0)
+print(num_inferior, num_superior, redondeo)
