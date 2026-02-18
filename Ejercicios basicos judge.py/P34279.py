@@ -1,12 +1,15 @@
 tiempo=input()
 lista=[]
 lista=tiempo.split()
-listamas1=int(lista[2])+1
-if int(listamas1[2])>=60:
-    int(listamas1[2])=0
-    int(listamas1[1])+1
-if int(listamas1[1]>=60):
-    int(listamas1[1])=0
-    int(listamas1[0])+1
-if int (listamas1[0])>=24:
-    int(listamas1[0])=0
+lista[2]=int(lista[2])+1
+for i in range(len(lista)):
+    lista[i] = int(lista[i])
+if lista[2]>=60:
+    lista[2]=0
+    lista[1]+=1
+if lista[1]>=60:
+    lista[1]=0
+    lista[0]+=1
+if lista[0]>=24:
+    lista[0]=0
+print(f"{lista[0]:02d}:{lista[1]:02d}:{lista[2]:02d}")
