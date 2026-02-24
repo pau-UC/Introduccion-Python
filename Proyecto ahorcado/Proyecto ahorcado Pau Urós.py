@@ -1,5 +1,6 @@
 import random
-lista_palabrasecreta=["patata","tomate","esternoclidomastoideo","marmota","aeropuerto","libreria","submarino","sublime","alpha","controversia"]
+print("")
+lista_palabrasecreta=["patata","tomate","esternocleidomastoideo","marmota","aeropuerto","libreria","submarino","sublime","alpha","controversia",]
 lista_partida=[]
 lista_ahorcado=["A","H","O","R","C","A","D","O"]
 longitud="_"
@@ -9,7 +10,7 @@ errores=0
 aleatorio=random.choice(lista_palabrasecreta)
 for i in range(len(aleatorio)):
     lista_partida+=longitud.split(",")
-while repetir!="n":
+while repetir=="s":
     while error!=8:
         print(lista_partida)
         letra=input("Introduce una letra: ")
@@ -18,7 +19,5 @@ while repetir!="n":
                 lista_partida[i]=letra
             else:
                 error+=1
-                for i in range(len(lista_ahorcado)):
-                    errores+=lista_ahorcado[error]
-                    print(lista_ahorcado)
+                print(lista_ahorcado[error])
     repetir=input("deseas realizar otro ahorcado s/n: ")
