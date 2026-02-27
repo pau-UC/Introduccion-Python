@@ -11,12 +11,14 @@ print("5. Introduce un 5 si usted desea que la categoria sea entretenimiento")
 print("6. Introduce un 6 si usted desea que la categoria sea arte y literatura")
 categoria=int(input("Introduce la categoria que quires realizar: "))
 if categoria==1:
-    lista_palabrasecreta=["deportista","ronaldo","waterpolo","competicion","estrategia","maraton","mariposa","natacion",""]
+    lista_palabrasecreta=["deportista","ronaldo","waterpolo","competicion","estrategia","maraton","estilos","natacion","bobsleigh","pertiga"]
 elif categoria==2:
     lista_palabrasecreta=["zimbaue","afluente","turkmenistan","marmota","aeropuerto","libreria","submarino","sublime","alpha","controversia",]
 elif categoria==3:
+    print("Has selecionado la categoria de historia")
     lista_palabrasecreta=["normadia","","esternocleidomastoideo","marmota","aeropuerto","libreria","submarino","sublime","alpha","controversia",]
 elif categoria==4:
+    print("Has selecionado la categoria de ciencias")
     lista_palabrasecreta=["patata","tomate","esternocleidomastoideo","marmota","aeropuerto","libreria","submarino","sublime","alpha","controversia",]
 elif categoria==5:
     lista_palabrasecreta=["patata","tomate","esternocleidomastoideo","marmota","aeropuerto","libreria","submarino","sublime","alpha","controversia",]
@@ -30,14 +32,29 @@ if categoria>=1 and categoria<=6:
     longitud="_"
     repetir="s"
     error=0
-    aleatorio=random.choice(lista_palabrasecreta)
-    for i in range(len(aleatorio)):
-        lista_partida+=longitud.split(",")
+    letras_introducidas=[]
     while repetir=="s":
+        lista_partida=[]
+        letras_introducidas=[]
+        aleatorio=random.choice(lista_palabrasecreta)
+        for i in range(len(aleatorio)):
+            lista_partida+=longitud.split(",")
         while error!=8:
             print(lista_partida)
             letra=input("Introduce una letra: ")
-            for i in range(len(aleatorio)):
-                if letra==aleatorio[i]:
-                    lista_partida[i]=letra
+            letras_introducidas+=letra
+            if letra in aleatorio:
+                for i in range(len(aleatorio)):
+                    if letra==aleatorio[i]:
+                        lista_partida[i]=letra
+                        print(letras_introducidas)
+            else:
+                error+=1
+                print(letras_introducidas)
+            if not "_" in lista_partida:
+                print("muy bien has acertado la palabra")
+                break
+        if error==8:
+            print("Has perdido, se han agotado tus intentos, la palabra era", aleatorio)
         repetir=input("deseas realizar otro ahorcado s/n: ")
+        error=0
