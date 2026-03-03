@@ -11,9 +11,11 @@ print("5. Introduce un 5 si usted desea que la categoria sea entretenimiento")
 print("6. Introduce un 6 si usted desea que la categoria sea arte y literatura")
 categoria=int(input("Introduce la categoria que quires realizar: "))
 if categoria==1:
+    print("Has selecionado la categoria de deportes")
     lista_palabrasecreta=["deportista","ronaldo","waterpolo","competicion","estrategia","maraton","estilos","natacion","bobsleigh","pertiga"]
 elif categoria==2:
-    lista_palabrasecreta=["zimbaue","afluente","turkmenistan","marmota","aeropuerto","libreria","submarino","sublime","alpha","controversia",]
+    print("Has selcionado la categoria de geografia")
+    lista_palabrasecreta=["zimbaue","afluente","turkmenistan","bangladesh","prusia","hispania","kiribati","singapur","alpha","controversia",]
 elif categoria==3:
     print("Has selecionado la categoria de historia")
     lista_palabrasecreta=["normadia","","esternocleidomastoideo","marmota","aeropuerto","libreria","submarino","sublime","alpha","controversia",]
@@ -21,8 +23,10 @@ elif categoria==4:
     print("Has selecionado la categoria de ciencias")
     lista_palabrasecreta=["patata","tomate","esternocleidomastoideo","marmota","aeropuerto","libreria","submarino","sublime","alpha","controversia",]
 elif categoria==5:
+    print("Has selecionado la categoria de entretenimiento")
     lista_palabrasecreta=["patata","tomate","esternocleidomastoideo","marmota","aeropuerto","libreria","submarino","sublime","alpha","controversia",]
 elif categoria==6:
+    print("Has selecionado la categoria de arte y literatura")
     lista_palabrasecreta=["patata","tomate","esternocleidomastoideo","marmota","aeropuerto","libreria","submarino","sublime","alpha","controversia",]
 else:
     print("tienes que introducir un numero entre 1 y 6")
@@ -33,6 +37,7 @@ if categoria>=1 and categoria<=6:
     repetir="s"
     error=0
     letras_introducidas=[]
+    lista_error=0
     while repetir=="s":
         lista_partida=[]
         letras_introducidas=[]
@@ -55,6 +60,10 @@ if categoria>=1 and categoria<=6:
                 print("muy bien has acertado la palabra")
                 break
         if error==8:
+            lista_error+=1
             print("Has perdido, se han agotado tus intentos, la palabra era", aleatorio)
         repetir=input("deseas realizar otro ahorcado s/n: ")
+        if repetir!="s" or repetir!="n":
+            print("por favor introduce s o n")
+            repetir=input("deseas realizar otro ahorcado s/n: ")
         error=0
