@@ -1,4 +1,5 @@
 import random
+import time
 print("Instrucciones:")
 print("simepre ha de poner la letra en minuscula y sin accentos")
 print("Al acabar el programa se eliminara la palabra elegida aleatoriamente y podras añadir una palabra nueva")
@@ -32,7 +33,7 @@ else:
     print("tienes que introducir un numero entre 1 y 6")
 if categoria>=1 and categoria<=6:
     lista_partida=[]
-    lista_ahorcado=["A","H","O","R","C","A","D","O"]
+    lista_ahorcado=[]
     longitud="_"
     repetir="s"
     error=0
@@ -44,7 +45,8 @@ if categoria>=1 and categoria<=6:
         aleatorio=random.choice(lista_palabrasecreta)
         for i in range(len(aleatorio)):
             lista_partida+=longitud.split(",")
-        while error!=8:
+        while error!=8 and lista_aleatorio!=lista_partida:
+            lista_aleatorio=list(aleatorio)
             print(lista_partida)
             letra=input("Introduce una letra: ")
             letras_introducidas+=letra
@@ -55,15 +57,31 @@ if categoria>=1 and categoria<=6:
                         print(letras_introducidas)
             else:
                 error+=1
+                if error==1:
+                    lista_ahorcado.append("A")
+                if error==2:
+                    lista_ahorcado.append("H")
+                if error==3:
+                    lista_ahorcado.append("O")
+                if error==4:
+                    lista_ahorcado.append("R")
+                if error==5:
+                    lista_ahorcado.append("C")
+                if error==6:
+                    lista_ahorcado.append("A")
+                if error==7:
+                    lista_ahorcado.append("D")
+                if error==8:
+                    lista_ahorcado.append("O")
+                print(lista_ahorcado)
                 print(letras_introducidas)
-            if not "_" in lista_partida:
-                print("muy bien has acertado la palabra")
-                break
         if error==8:
             lista_error+=1
             print("Has perdido, se han agotado tus intentos, la palabra era", aleatorio)
+        else:
+            print("Muy bien has acertado la palabra")
         repetir=input("deseas realizar otro ahorcado s/n: ")
-        if repetir!="s" or repetir!="n":
+        while repetir!="s" and repetir!="n":
             print("por favor introduce s o n")
             repetir=input("deseas realizar otro ahorcado s/n: ")
         error=0
