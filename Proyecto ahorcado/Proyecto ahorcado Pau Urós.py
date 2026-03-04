@@ -39,14 +39,14 @@ if categoria>=1 and categoria<=6:
     error=0
     letras_introducidas=[]
     lista_error=0
+    lista_aciertos=[]
     while repetir=="s":
         lista_partida=[]
         letras_introducidas=[]
         aleatorio=random.choice(lista_palabrasecreta)
         for i in range(len(aleatorio)):
             lista_partida+=longitud.split(",")
-        while error!=8 and lista_aleatorio!=lista_partida:
-            lista_aleatorio=list(aleatorio)
+        while error!=8 and lista_partida!=list(aleatorio):
             print(lista_partida)
             letra=input("Introduce una letra: ")
             letras_introducidas+=letra
@@ -78,8 +78,9 @@ if categoria>=1 and categoria<=6:
         if error==8:
             lista_error+=1
             print("Has perdido, se han agotado tus intentos, la palabra era", aleatorio)
-        else:
+        if lista_partida==list(aleatorio)
             print("Muy bien has acertado la palabra")
+            lista_aciertos+=1
         repetir=input("deseas realizar otro ahorcado s/n: ")
         while repetir!="s" and repetir!="n":
             print("por favor introduce s o n")
