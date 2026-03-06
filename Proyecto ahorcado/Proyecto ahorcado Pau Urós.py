@@ -39,7 +39,7 @@ if categoria>=1 and categoria<=6:
     error=0
     letras_introducidas=[]
     lista_error=0
-    lista_aciertos=[]
+    lista_aciertos=0
     while repetir=="s":
         lista_partida=[]
         letras_introducidas=[]
@@ -78,7 +78,7 @@ if categoria>=1 and categoria<=6:
         if error==8:
             lista_error+=1
             print("Has perdido, se han agotado tus intentos, la palabra era", aleatorio)
-        if lista_partida==list(aleatorio)
+        if lista_partida==list(aleatorio):
             print("Muy bien has acertado la palabra")
             lista_aciertos+=1
         repetir=input("deseas realizar otro ahorcado s/n: ")
