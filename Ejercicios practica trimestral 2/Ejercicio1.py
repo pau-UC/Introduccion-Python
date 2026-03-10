@@ -1,0 +1,10 @@
+variable=input("introduce los valores: ")
+lista=variable.split(",")
+lista=[int(x) for x in lista]
+maxi=max(lista)
+mini=min(lista)
+lista.remove(maxi)
+lista.remove(mini)
+media=sum(lista)/len(lista)
+print("la media es: ",media)
+print(lista)
