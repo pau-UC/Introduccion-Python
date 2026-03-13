@@ -28,7 +28,7 @@ elif categoria==5:
     lista_palabrasecreta=["patata","tomate","esternocleidomastoideo","marmota","aeropuerto","libreria","submarino","sublime","alpha","controversia",]
 elif categoria==6:
     print("Has selecionado la categoria de arte y literatura")
-    lista_palabrasecreta=["patata","tomate","esternocleidomastoideo","marmota","aeropuerto","libreria","submarino","sublime","alpha","controversia",]
+    lista_palabrasecreta=["hamlet","quijote","picasso","shakespeare","Frankenstein","submarino","sublime","alpha","controversia",]
 else:
     print("tienes que introducir un numero entre 1 y 6")
 if categoria>=1 and categoria<=6:
@@ -79,6 +79,8 @@ if categoria>=1 and categoria<=6:
         if error==8:
             errores+=1
             print("Has perdido, se han agotado tus intentos, la palabra era", aleatorio)
+            lista_palabrasecreta.remove(aleatorio)
+            introducir=input("introduce alguna ")
         if lista_partida==list(aleatorio):
             print("Muy bien has acertado la palabra")
             aciertos+=1
@@ -87,3 +89,5 @@ if categoria>=1 and categoria<=6:
             print("por favor introduce s o n")
             repetir=input("deseas realizar otro ahorcado s/n: ")
         error=0
+    print("Muy bien has acertado", aciertos, "palabras y has fallado", errores, "palabras.")
+    print("Adios hasta la proxima")
