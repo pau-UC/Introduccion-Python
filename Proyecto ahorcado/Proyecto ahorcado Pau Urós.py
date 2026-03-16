@@ -16,19 +16,19 @@ if categoria==1:
     lista_palabrasecreta=["deportista","ronaldo","waterpolo","competicion","estrategia","maraton","estilos","natacion","bobsleigh","pertiga"]
 elif categoria==2:
     print("Has selcionado la categoria de geografia")
-    lista_palabrasecreta=["zimbaue","afluente","turkmenistan","bangladesh","prusia","hispania","kiribati","singapur","alpha","controversia",]
+    lista_palabrasecreta=["zimbaue","afluente","turkmenistan","bangladesh","prusia","hispania","kiribati","singapur","golfo","florida",]
 elif categoria==3:
     print("Has selecionado la categoria de historia")
-    lista_palabrasecreta=["normadia","","esternocleidomastoideo","marmota","aeropuerto","libreria","submarino","sublime","alpha","controversia",]
+    lista_palabrasecreta=["normadia","napoleón","imperialismo","revolución","versalles","Bismarck","américa","lepanto","templarios","dunkerque",]
 elif categoria==4:
     print("Has selecionado la categoria de ciencias")
-    lista_palabrasecreta=["patata","tomate","esternocleidomastoideo","marmota","aeropuerto","libreria","submarino","sublime","alpha","controversia",]
+    lista_palabrasecreta=["relatividad","Einstein","gravedad","esternocleidomastoideo","ventriculo","eclipse","electrones","alcalinoterreos","alpha","trigonometria",]
 elif categoria==5:
     print("Has selecionado la categoria de entretenimiento")
-    lista_palabrasecreta=["patata","tomate","esternocleidomastoideo","marmota","aeropuerto","libreria","submarino","sublime","alpha","controversia",]
+    lista_palabrasecreta=["oscar","interestelar","titanic","yoda","chewbacca","sauron","vader","youtube","marvel","gandalf",]
 elif categoria==6:
     print("Has selecionado la categoria de arte y literatura")
-    lista_palabrasecreta=["hamlet","quijote","picasso","shakespeare","Frankenstein","submarino","sublime","alpha","controversia",]
+    lista_palabrasecreta=["hamlet","quijote","picasso","shakespeare","Frankenstein","cervantes","Gioconda","guernica","maquiavelo","ilíada"]
 else:
     print("tienes que introducir un numero entre 1 y 6")
 if categoria>=1 and categoria<=6:
@@ -80,10 +80,15 @@ if categoria>=1 and categoria<=6:
             errores+=1
             print("Has perdido, se han agotado tus intentos, la palabra era", aleatorio)
             lista_palabrasecreta.remove(aleatorio)
-            introducir=input("introduce alguna ")
+            introducir=input("introduce alguna palabra nueva: ")
+            lista_palabrasecreta.remove(aleatorio)
+            lista_palabrasecreta.append(introducir)
         if lista_partida==list(aleatorio):
             print("Muy bien has acertado la palabra")
             aciertos+=1
+            introducir=input("introduce alguna palabra nueva: ")
+            lista_palabrasecreta.remove(aleatorio)
+            lista_palabrasecreta.append(introducir)
         repetir=input("deseas realizar otro ahorcado s/n: ")
         while repetir!="s" and repetir!="n":
             print("por favor introduce s o n")
