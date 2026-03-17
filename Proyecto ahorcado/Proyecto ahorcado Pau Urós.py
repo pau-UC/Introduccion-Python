@@ -37,58 +37,69 @@ if categoria>=1 and categoria<=6:
     longitud="_"
     repetir="s"
     error=0
-    letras_introducidas=[]
     errores=0
     aciertos=0
     while repetir=="s":
         lista_partida=[]
         letras_introducidas=[]
         lista_ahorcado=[]
+        lista_introducir=[]
         aleatorio=random.choice(lista_palabrasecreta)
         for i in range(len(aleatorio)):
             lista_partida+=longitud.split(",")
         while error!=8 and lista_partida!=list(aleatorio):
             print(lista_partida)
             letra=input("Introduce una letra: ")
-            letras_introducidas.append(letra)
-            if letra in aleatorio:
-                for i in range(len(aleatorio)):
-                    if letra==aleatorio[i]:
-                        lista_partida[i]=letra
-                        print(letras_introducidas)
+            if letra.isupper():
+                letra_minus=letra.lower()
             else:
-                error+=1
-                if error==1:
-                    lista_ahorcado.append("A")
-                if error==2:
-                    lista_ahorcado.append("H")
-                if error==3:
-                    lista_ahorcado.append("O")
-                if error==4:
-                    lista_ahorcado.append("R")
-                if error==5:
-                    lista_ahorcado.append("C")
-                if error==6:
-                    lista_ahorcado.append("A")
-                if error==7:
-                    lista_ahorcado.append("D")
-                if error==8:
-                    lista_ahorcado.append("O")
-                print(lista_ahorcado)
-                print(letras_introducidas)
+                letra_minus=letra
+            for i in range(len(aleatorio)):
+                if letra_minus==aleatorio[i]:
+                    lista_partida[i]=letra_minus
+                elif letra_minus=="a" and aleatorio[i]=="á":
+                    lista_partida[i]=="á"
+                elif letra_minus=="e" and aleatorio[i]=="é":
+                    lista_partida[i]=="é"
+                elif letra_minus=="i" and aleatorio[i]=="í":
+                    lista_partida[i]=="í"
+                elif letra_minus=="o" and aleatorio[i]=="ó":
+                    lista_partida[i]=="ó"
+                elif letra_minus=="u" and aleatorio[i]=="ú":
+                    lista_partida[i]=="ú"
+                else:
+                    error+=1
+                    if error==1:
+                        lista_ahorcado.append("A")
+                    if error==2:
+                        lista_ahorcado.append("H")
+                    if error==3:
+                        lista_ahorcado.append("O")
+                    if error==4:
+                        lista_ahorcado.append("R")
+                    if error==5:
+                        lista_ahorcado.append("C")
+                    if error==6:
+                        lista_ahorcado.append("A")
+                    if error==7:
+                        lista_ahorcado.append("D")
+                    if error==8:
+                        lista_ahorcado.append("O")
+                    print(lista_ahorcado)
         if error==8:
             errores+=1
             print("Has perdido, se han agotado tus intentos, la palabra era", aleatorio)
+            introducir=input("introduce alguna palabra nueva separada por espacios: ")
+            lista_introducir=introducir.split()
             lista_palabrasecreta.remove(aleatorio)
-            introducir=input("introduce alguna palabra nueva: ")
-            lista_palabrasecreta.remove(aleatorio)
-            lista_palabrasecreta.append(introducir)
+            lista_palabrasecreta.append(lista_introducir)
         if lista_partida==list(aleatorio):
             print("Muy bien has acertado la palabra")
             aciertos+=1
             introducir=input("introduce alguna palabra nueva: ")
+            lista_introducir=introducir.split(",")
             lista_palabrasecreta.remove(aleatorio)
-            lista_palabrasecreta.append(introducir)
+            lista_palabrasecreta.append(lista_introducir)
         repetir=input("deseas realizar otro ahorcado s/n: ")
         while repetir!="s" and repetir!="n":
             print("por favor introduce s o n")
